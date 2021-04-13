@@ -2,7 +2,7 @@ let con = require("../orm");
 let {Sequelize, DataTypes} = require("sequelize");
 const Esporte = require("./Esporte");
 
-//id, titulo, nivel
+
 
 const Evento = con.define("Evento",
     {

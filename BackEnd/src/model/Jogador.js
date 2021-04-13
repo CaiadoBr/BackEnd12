@@ -3,7 +3,7 @@ let {Sequelize, DataTypes} = require("sequelize");
 const Posicao = require("./Posicao");
 const Time = require("./Time");
 
-// id, titulo, texto, valor, input, output
+
 const Jogador = con.define("Jogador",
     {
 

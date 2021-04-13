@@ -2,7 +2,7 @@ let con = require("../orm");
 let {Sequelize, DataTypes} = require("sequelize");
 const Usuario = require("./Usuario");
 
-// id, tipo. titulo, data, duracao
+
 const Esporte = con.define("Esporte",
     {
 

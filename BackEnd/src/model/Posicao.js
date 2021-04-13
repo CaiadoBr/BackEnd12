@@ -1,7 +1,7 @@
 let con = require("../orm");
 let {Sequelize, DataTypes} = require("sequelize");
 
-//id, nome, email, senha
+
 
 const Posicao = con.define("Posicao",
     {
