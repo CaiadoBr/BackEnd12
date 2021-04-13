@@ -1,38 +1,45 @@
 let con = require("../orm");
 let {Sequelize, DataTypes} = require("sequelize");
-const Competicao = require("./Competicao");
+const Esporte = require("./Esporte");
 
 //id, titulo, nivel
 
-const Prova = con.define("Prova",
+const Evento = con.define("Evento",
     {
 
-        id: { 
+        idEvento: { 
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
         },
 
-        titulo: {
+        DataPraticar: {
+            type: DataTypes.DATE,
+            allowNull: false
+
+        },
+
+        localizacao: {
             type: DataTypes.STRING,
             allowNull: false
 
         },
 
-        nivel: {
-            type: DataTypes.STRING,
+         times: {
+            type: DataTypes.ARRAY,
             allowNull: false
 
         },
 
-        CompeticaoId: {
+        EsporteId: {
             type: DataTypes.INTEGER,
             references: {
 
                 model: Competicao,
-                key: "id"
+                key: "EsporteId"
 
             }
+         
 
         }
     }
@@ -40,9 +47,11 @@ const Prova = con.define("Prova",
 
 
 // relacionamento "composta"
-Prova.belongsTo(Competicao);
-Competicao.hasMany(Prova, {as: "provas"});
+Eventos.belongsTo(Esporte);
+Evento.hasMany(Esporte, {as: "Esporte"});
 
 
 
-module.exports = Prova;
+
+
+module.exports = Evento;

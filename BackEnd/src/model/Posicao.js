@@ -3,7 +3,7 @@ let {Sequelize, DataTypes} = require("sequelize");
 
 //id, nome, email, senha
 
-const Usuario = con.define("Usuario",
+const Posicao = con.define("Posicao",
     {
 
         id: { 
@@ -18,18 +18,8 @@ const Usuario = con.define("Usuario",
 
         },
 
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false
-
-        },
-
-        senha: {
-            type: DataTypes.STRING,
-            allowNull: false
-
-        }
+       
     }
 );
-
-module.exports = Usuario;
+ 
+module.exports = Posicao;
