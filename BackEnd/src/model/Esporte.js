@@ -1,12 +1,12 @@
 let con = require("../orm");
 let {Sequelize, DataTypes} = require("sequelize");
-const Usuario = require("./Usuario");
+
 
 
 const Esporte = con.define("Esporte",
     {
 
-        EsporteId: { 
+       id: { 
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
