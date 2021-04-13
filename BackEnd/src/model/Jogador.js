@@ -34,7 +34,7 @@ const Jogador = con.define("Jogador",
             primaryKey: true,
             references: {
 
-                model: Usuario,
+                model: Time,
                 key: "id"
             }
         },
